@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">约咖</string>
+    <string name="logo1">约咖图标</string>
+    <string name="myfriend">我的好友</string>
+    <string name="myclothing">个性装扮</string>
+    <string name="mycharm">我的魅力值</string>
+    <string name="myroom">我开设的房间</string>
+    <string name="mycollect">我的收藏</string>
+    <string name="setting">设置</string>
+    <string name="night">夜间模式</string>
+    <string name="home">首页</string>
+    <string name="chatting">约聊</string>
+    <string name="forum">论坛</string>
+    <string name="list">魅力榜</string>
+    <string name="recommend">推荐</string>
+    <string name="yueka_1">约跑</string>
+    <string name="yueka_2">约餐</string>
+    <string name="yueka_3">约球类</string>
+    <string name="yueka_4">约联谊</string>
+    <string name="yueka_5">约出游</string>
+    <string name="yueka_6">其它</string>
+    <string name="information_stranger">陌生人消息</string>
+</resources>

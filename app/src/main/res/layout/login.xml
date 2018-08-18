@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,LabelFor"
+    android:background="@drawable/background_login">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="134dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/logo1"
+        android:src="@drawable/yueka_logo_wirte"
+        app:srcCompat="@drawable/yueka_logo_wirte" />
+
+    <EditText
+        android:id="@+id/et_userid"
+        android:theme="@style/MyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="学号"
+        android:inputType="number"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:drawableRight="@drawable/exampe"
+        android:drawableEnd="@drawable/exampe"
+        app:layout_constraintBottom_toTopOf="@+id/et_userpwd" />
+
+    <EditText
+        android:id="@+id/et_userpwd"
+        android:theme="@style/MyEditText"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/btn_forgetpwd"/>
+
+    <Button
+        android:id="@+id/btn_forgetpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="忘记密码"
+        android:textColor="#fff"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="新用户注册"
+        android:textColor="#fff"
+        app:layout_constraintRight_toRightOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@+id/btn_forgetpwd"/>
+    
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#d499ff66"
+        android:text="登录"
+        android:onClick="click"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="登录即代表阅读并同意服务条款"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_marginBottom="50dp"/>
+
+</android.support.constraint.ConstraintLayout>

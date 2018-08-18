@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spingarr">
+        <item>北田</item>
+        <item>立志楼</item>
+        <item>立功楼</item>
+        <item>立言楼</item>
+        <item>一教</item>
+        <item>十教附一</item>
+    </string-array>
+</resources>
