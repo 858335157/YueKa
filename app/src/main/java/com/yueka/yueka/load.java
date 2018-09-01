@@ -19,30 +19,30 @@ public class load extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.load);
+        setContentView(R.layout.load);//打开load xml布局
 
         if (UserManage.getInstance().hasUserInfo(this))//自动登录判断，SharePrefences中有数据，则跳转到主页，没数据则跳转到登录页
         {
-            mHandler.sendEmptyMessageDelayed(GO_HOME, 2000);
+            mHandler.sendEmptyMessageDelayed(GO_HOME, 2000);//有数据，发送消息GO_HOME
         } else {
-            mHandler.sendEmptyMessageAtTime(GO_LOGIN, 2000);
+            mHandler.sendEmptyMessageAtTime(GO_LOGIN, 2000);//没有数据，发送消息GO_LOGIN
         }
 
     }
 
     private Handler mHandler = new Handler(new Handler.Callback() {
         @Override
-        public boolean handleMessage(Message msg) {
+        public boolean handleMessage(Message msg) {//对发送到消息进行处理
             switch (msg.what) {
                 case GO_HOME://去主页
-                    Intent intent = new Intent(load.this, main.class);
+                    Intent intent = new Intent(load.this, main.class);//创建新意图，从load跳转到main
                     startActivity(intent);
-                    finish();
+                    finish();//关闭当前activity
                     break;
                 case GO_LOGIN://去登录页
-                    Intent intent2 = new Intent(load.this, login.class);
+                    Intent intent2 = new Intent(load.this, login.class);//创建新意图，从load跳转到login
                     startActivity(intent2);
-                    finish();
+                    finish();//关闭当前activity
                     break;
             }
             return false;

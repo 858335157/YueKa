@@ -27,11 +27,10 @@ public class UserManage {
     /**
      * 保存自动登录的用户信息
      */
-    public void saveUserInfo(Context context, String username, String password) {
+    public void saveUserInfo(Context context, String username) {
         SharedPreferences sp = context.getSharedPreferences("userInfo", Context.MODE_PRIVATE);//Context.MODE_PRIVATE表示SharePrefences的数据只有自己应用程序能访问。
         SharedPreferences.Editor editor = sp.edit();
         editor.putString("USER_NAME", username);
-        editor.putString("PASSWORD", password);
         editor.apply();
     }
 
@@ -47,7 +46,6 @@ public class UserManage {
         SharedPreferences sp = context.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
         UserInfo userInfo = new UserInfo();
         userInfo.setUserName(sp.getString("USER_NAME", ""));
-        userInfo.setPassword(sp.getString("PASSWORD", ""));
         return userInfo;
     }
 
@@ -58,7 +56,7 @@ public class UserManage {
     public boolean hasUserInfo(Context context) {
         UserInfo userInfo = getUserInfo(context);
         //有数据
-        return userInfo != null && (!TextUtils.isEmpty(userInfo.getUserName())) && (!TextUtils.isEmpty(userInfo.getPassword()));
+        return userInfo != null && (!TextUtils.isEmpty(userInfo.getUserName()));
     }
 
 }

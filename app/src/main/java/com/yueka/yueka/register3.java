@@ -63,7 +63,7 @@ public class register3 extends Activity{
             public boolean handleMessage(Message msg) {
 
                 if( msg.what == 0x110 ) {
-                    UserManage.getInstance().saveUserInfo(register3.this, studyid, password);
+                    UserManage.getInstance().saveUserInfo(register3.this, studyid);
                     Intent intent1 = new Intent(register3.this, main.class);
                     intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent1);
