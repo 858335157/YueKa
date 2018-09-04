@@ -151,7 +151,9 @@ public class register2 extends Activity {
 
             private Character registertoto(){
                 String param = "identid="+identid+"&studyid="+studyid+"&phone="+phonenumber;
-                String result = HttpRequest.sendPost("http://wyjwyj.vicp.io:25098/YueKa/find",param);
+                defineinfor aaa = new defineinfor();
+                String url = aaa.getURL()+"/find";
+                String result = HttpRequest.sendPost(url,param);
                 return result.charAt(10);
             }
         }).start();

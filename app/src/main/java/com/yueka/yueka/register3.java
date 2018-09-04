@@ -100,7 +100,9 @@ public class register3 extends Activity{
 
             private Character registertoto(){
                 String param = "identid="+identid+"&studyid="+studyid+"&phone="+phone+"&password="+password;
-                String result = HttpRequest.sendPost("http://wyjwyj.vicp.io:25098/YueKa/register",param);
+                defineinfor aaa = new defineinfor();
+                String url = aaa.getURL()+"/register";
+                String result = HttpRequest.sendPost(url,param);
                 return result.charAt(10);
             }
         }).start();

@@ -40,8 +40,11 @@ public class login extends Activity {
         et_userpwd = findViewById(R.id.et_userpwd);
 
 
-        //嵌入html链接标签，暂时服务条款没做出来，直接链接到百度首页
-        tv_service.setText(Html.fromHtml("登录即代表阅读并同意<a href='https://www.baidu.com/'>服务条款</a>"));
+        //嵌入html链接标签，暂时服务条款没做出来
+        defineinfor aaa = new defineinfor();
+        String link = aaa.getURL();
+        String htmlherf = "登录即代表阅读并同意<a href='"+link+"/Service.html'>服务条款</a>";
+        tv_service.setText(Html.fromHtml(htmlherf));
         tv_service.setMovementMethod(LinkMovementMethod.getInstance());
 
         //给注册按钮添加监听，
@@ -106,7 +109,9 @@ public class login extends Activity {
                 }
                 userpwd = et_userpwd.getText().toString().trim();//获取用户输入的密码
                 String param = "userid="+userid+"&userpwd="+userpwd;//链接好后发送至服务器
-                String result = HttpRequest.sendPost("http://wyjwyj.vicp.io:25098/YueKa/login",param);
+                defineinfor aaa = new defineinfor();
+                String url = aaa.getURL()+"/login";
+                String result = HttpRequest.sendPost(url,param);
                 return result.charAt(10);//返回服务器返回的信息的第十个字符（具体原因懒得解释）
             }
         }).start();//开启新线程
